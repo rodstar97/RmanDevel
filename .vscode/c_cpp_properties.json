@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Prman",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/pixar/RenderManProServer-23.4/include"
+
+            ],
+            "defines": [],
+            "compilerPath": "g++",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64",
+            "compilerArgs": [
+            ]
+        }
+    ],
+    "version": 4
+}

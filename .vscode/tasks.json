@@ -1,0 +1,53 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "PRMAN C/C++: g++ build active file",
+            "command": "/opt/rh/devtoolset-6/root/bin/g++",
+            "args": [
+                "-fPIC",
+                "-I",
+                "/opt/pixar/RenderManProServer-23.4/include",
+                "-c",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/plugins/bin/${fileBasenameNoExtension}.o"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "PRMAN link active file",
+            "command": "/opt/rh/devtoolset-6/root/bin/g++",
+            "args": [
+                "-shared",
+                "${workspaceFolder}/plugins/bin/${fileBasenameNoExtension}.o",
+                "-o",
+                "${workspaceFolder}/plugins/bin/${fileBasenameNoExtension}.so"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+
+        }
+
+    ],
+
+    "version": "2.0.0"
+}
